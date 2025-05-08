@@ -8,25 +8,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cal+Sans&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
     <title>Weather App</title>
 </head>
 <body>
     <div class="container">
         <div class="input-box">
-            <i class="fa-solid fa-location-dot"></i><input type="text" placeholder="What is your location?">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <i class="fa-solid fa-location-dot"></i><input type="text" placeholder="What is your location?" id="weatherLocation">
+            <button onclick="getWeather()"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
-        <div class="description-box">
-            <p class="location">Birmingham, AL</p>
-            <img src="Photos/218954-P1070Y-526.jpg" alt="404NotFound">
-            <p class="description">Partly Cloudy 75F</p>
+        <div class="description-box" id="descriptionBox">
+            <p class="location" id="locationName"></p>
+            <img src="" alt="WeatherPhoto" id="weatherImage">
+            <p class="description" id="weatherDescription"></p>
         </div>
-        <div class="weather-box">
+        <div class="weather-box" id="weatherBox">
             <div class="wind">
-                <p>Wind <i class="fa-solid fa-wind"></i></p>
-                <p>5mph</p>
+                <p><i class="fa-solid fa-wind"></i> Wind</p>
+                <p class="white" id="windSpeed"></p>
             </div>
-            <p class="humidity">Humidity <i class="fa-solid fa-water"></i></p>
+            <Div class="humidity"><p> <i class="fa-solid fa-water"></i> Humidity</p>
+            <p class="white" id="humidityPercentage"></p></div>
         </div>
     </div>
 </body>
